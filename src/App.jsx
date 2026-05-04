@@ -1,27 +1,16 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { theme } from './theme';
-import { GlobalStyles } from './GlobalStyles';
-import ElementorRenderer from './components/ElementorRenderer';
-import siteData from '../site_data.json';
-
-function Home() {
-  const homeData = siteData.home.data;
-  return <ElementorRenderer elements={homeData} />;
-}
+import Home from './pages/Home';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Redireciona qualquer rota não encontrada para a Home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
