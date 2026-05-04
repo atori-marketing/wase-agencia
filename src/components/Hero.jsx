@@ -36,12 +36,10 @@ const Hero = () => {
         loop 
         playsInline 
         preload="none"
-        poster={isMobile ? "FLYER.webp" : "CH8.webp"} // Usando imagens existentes como placeholder
+        poster={isMobile ? "1080x1080-thumb.webp" : "1920x1080-thumb.webp"}
       >
         {loadVideo && <source src={videoSrc} type="video/mp4" />}
       </VideoBackground>
-
-      {/* Logo Hero */}
       <OptimizedImage
         src='cropped-logo-wase.webp'
         loading="eager"
