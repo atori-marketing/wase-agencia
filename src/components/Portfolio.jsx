@@ -31,7 +31,6 @@ const PortfolioImage = styled(OptimizedImage)`
 const Portfolio = () => {
   const isMobile = useIsMobile();
 
-  // Imagens extraídas do Portfólio real no site_data.json
   const images = [
     'FRXV-CH68.webp',
     'FRXV-CH54.webp',

@@ -18,7 +18,6 @@ const Grid = styled.div`
 const Cobertura = () => {
   const isMobile = useIsMobile();
 
-  // Imagens extraídas do site_data.json e outras referências do projeto
   const portfolioImages = [
     'IMG_9085.webp',
     'IMG_1710.webp',
